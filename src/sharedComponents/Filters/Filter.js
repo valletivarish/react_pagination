@@ -3,7 +3,7 @@ import React from "react";
 const Filter = (props) => {
     const options=props.dataList.filter(key => key !== "senderAccount" && key !== "receiverAccount" && key!== "transactionType")  
     .map(key => (
-        <option key={key}>{key}</option> 
+        <option >{key}</option> 
     ));
 
     const search=()=>{

@@ -1,6 +1,8 @@
 import React from "react";
 import "./Table.css";
 import Filter from "../Filters/Filter";
+import Pagination from "../Pagination/Pagination";
+import Dropdown from "../Pagination/Dropdown";
 const Table = (props) => {
   const { data, setPage, setDirection, setFromDate, setSize, setSortBy, setToDate } = props;
 
@@ -56,6 +58,8 @@ const Table = (props) => {
             <tbody>{tableData}</tbody>
           </table>
         </div>
+        <Dropdown data={data} setSize={setSize} />
+        <Pagination data={data} setPage={setPage} />
       </div>
     );
   }
