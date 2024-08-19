@@ -1,5 +1,5 @@
 import React from "react";
-
+import './Filter.css'
 const Filter = (props) => {
     const options=props.dataList.filter(key => key !== "senderAccount" && key !== "receiverAccount" && key!== "transactionType")  
     .map(key => (
@@ -34,6 +34,7 @@ const Filter = (props) => {
 
   return (
     <>
+      <div className="filter-container">
       <div className="input-container">
         <label>From Date :</label>
         <input type="date" name="from" />
@@ -60,7 +61,7 @@ const Filter = (props) => {
         >
           <option selected>Direction</option>
           <option value="asc">Ascending</option>
-          <option value="desc">descending</option>
+          <option value="desc">Descending</option>
         </select>
       </div>
       <div className="input-container">
@@ -72,6 +73,7 @@ const Filter = (props) => {
         <button type="button" class="btn btn-primary" onClick={reset}>
           Reset
         </button>
+      </div>
       </div>
     </>
   );

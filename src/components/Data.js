@@ -1,10 +1,11 @@
 import React, { useEffect,useState } from "react";
 import axios from "axios";
+import './Data.css'
 import Table from "../sharedComponents/Table/Table";
 const Data = () => {
   const [data, setData] = useState({});
   const [page, setPage] = useState(0);
-  const [size, setSize] = useState(5);
+  const [size, setSize] = useState(50);
   const [fromDate, setFromDate] = useState();
   const [toDate, setToDate] = useState();
   const [sortBy, setSortBy] = useState("id");
